@@ -138,7 +138,23 @@
                                     </stackView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hFG-s4-rRu" userLabel="Timer View">
                                         <rect key="frame" x="0.0" y="532" width="361" height="227"/>
+                                        <subviews>
+                                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="cYw-d3-N0g">
+                                                <rect key="frame" x="0.0" y="111" width="361" height="5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="5" id="QFq-vk-GgM"/>
+                                                    <constraint firstAttribute="height" constant="5" id="QNL-zW-0MQ"/>
+                                                </constraints>
+                                                <color key="progressTintColor" red="1" green="0.84705882349999995" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <color key="trackTintColor" white="0.75" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </progressView>
+                                        </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="cYw-d3-N0g" secondAttribute="trailing" id="K8w-X4-IWe"/>
+                                            <constraint firstItem="cYw-d3-N0g" firstAttribute="centerY" secondItem="hFG-s4-rRu" secondAttribute="centerY" id="fLi-3H-9Wh"/>
+                                            <constraint firstItem="cYw-d3-N0g" firstAttribute="leading" secondItem="hFG-s4-rRu" secondAttribute="leading" id="geL-h3-DmJ"/>
+                                        </constraints>
                                     </view>
                                 </subviews>
                             </stackView>
@@ -152,6 +168,10 @@
                             <constraint firstItem="gwc-GI-jfP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="waO-LM-2BI"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="progressBar" destination="cYw-d3-N0g" id="oVI-Gf-7jM"/>
+                        <outlet property="titleLabel" destination="ZHv-dr-WGm" id="GeQ-5T-klA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
